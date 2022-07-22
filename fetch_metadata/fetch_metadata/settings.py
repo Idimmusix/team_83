@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 from decouple import config
-import os
+
 
 
 
@@ -29,7 +29,7 @@ SECRET_KEY = config("DJANGO_SECRET_KEY",'django-insecure-)s$5b$%h1raq8oam0+1^v19
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [*]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -42,16 +42,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-        # 3rd Party
+    # 3rd Party
     'django_extensions',
     'rest_framework',
     'rest_framework.authtoken',
 
-#local apps
+    #local apps
     'api.apps.ApiConfig',
-   'apps.accounts.apps.ApiConfig',
-   'apps.meta_extract.apps.ApiConfig',
-   'apps.commons.apps.ApiConfig',
+    'apps.accounts',
+    'apps.meta_extract.apps.MetaExtractConfig',
+    'apps.commons.apps.CommonsConfig',
 
 
 ]
