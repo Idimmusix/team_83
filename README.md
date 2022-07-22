@@ -27,4 +27,4 @@ Placeholder github repo for our project pending when we recieve our team page
 2. upgrade pip using `pip install --upgrade pip`
 3. install the dependencies using `pip install -r requirements.txt`
 4. cd into the project folder `cd fetch_metadata`
-5. run py
+5. run `python manage.py runserver`
