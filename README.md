@@ -4,9 +4,9 @@ Placeholder github repo for our project pending when we recieve our team page
 
 ## create a pull request
 
-1. clone the repo using `git clone https://github.com/idimmusix/team_8`
+1. clone the repo using `git clone https://github.com/idimmusix/team_83`
 
-2. open your terminal and cd into team_8 using `cd team_8`
+2. open your terminal and cd into team_8 using `cd team_83`
 
 3. create a new branch with your username using `git checkout -b <your-username>`
    _please replace your-username with the user name you are using on slack_
