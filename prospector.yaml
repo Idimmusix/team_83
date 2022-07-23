@@ -1,0 +1,237 @@
+output-format: json
+output-format: json
+strictness: medium
+test-warnings: true
+doc-warnings: false
+member-warnings: false
+inherits:
+    - default
+ignore-paths:
+    - docs
+ignore-patterns:
+    - (^|/)skip(this)?(/|$)
+autodetect: true
+max-line-length: 88
+
+bandit:
+    run: true
+    options:
+        config: .bandit.yml
+dodgy:
+    run: true
+    
+frosted:
+    disable:
+        - E103
+        - E306
+mccabe:
+    run: false
+    options:
+        max-complexity: 10
+
+pep8:
+    disable:
+        - W602
+        - W603
+    enable:
+        - W601
+    options:
+        max-line-length: 79
+pep257:
+    disable:
+        - D100
+        - D101py
+
+flakes:
+    disable:
+        - F403
+        - F810
+
+pylint:
+    disable:
+        - bad-builtin
+        - too-few-public-methods
+    options:
+        max-locals: 15
+        max-returns: 6
+        max-branches: 15 
+        max-statements: 60
+        max-parents: 7
+        max-attributes: 7
+        min-public-methods: 1
+        max-public-methods: 20
+        max-module-lines: 1000
+        max-line-length: 99
+        max-args: 6
+
+pyroma:
+     disable:
+        - PYR15
+        - PYR18
+
+mypy:
+     run: true
+     options:
+         ignore-missing-imports: true
+         follow-imports: skip
+
+vulture:
+     run: true
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+output-format: json
+output-format: json
+strictness: medium
+test-warnings: true
+doc-warnings: false
+member-warnings: false
+inherits:
+    - default
+ignore-paths:
+    - docs
+ignore-patterns:
+    - (^|/)skip(this)?(/|$)
+autodetect: true
+max-line-length: 88
+ 
+bandit:
+    run: true
+    options:
+        config: .bandit.yml
+dodgy:
+    run: true
+    
+frosted:
+    disable:
+        - E103
+        - E306
+mccabe:
+    run: false
+    options:
+        max-complexity: 10
+ 
+pep8:
+    disable:
+        - W602
+        - W603
+    enable:
+        - W601
+    options:
+        max-line-length: 79
+pep257:
+    disable:
+        - D100
+        - D101py
+ 
+flakes:
+    disable:
+        - F403
+        - F810
+ 
+pylint:
+    disable:
+        - bad-builtin
+        - too-few-public-methods
+    options:
+        max-locals: 15
+        max-returns: 6
+        max-branches: 15 
+        max-statements: 60
+        max-parents: 7
+        max-attributes: 7
+        min-public-methods: 1
+        max-public-methods: 20
+        max-module-lines: 1000
+        max-line-length: 99
+        max-args: 6
+ 
+pyroma:
+     disable:
+        - PYR15
+        - PYR18
+ 
+mypy:
+     run: true
+     options:
+         ignore-missing-imports: true
+         follow-imports: skip
+ 
+vulture:
+     run: true
