@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'api.apps.ApiConfig',
     'apps.accounts',
     'apps.meta_extract.apps.MetaExtractConfig',
-    'apps.commons.apps.CommonsConfig',
+    #'apps.commons.apps.CommonsConfig',
 
 
 ]
