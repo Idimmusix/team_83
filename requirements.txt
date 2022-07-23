@@ -4,4 +4,4 @@ django_extensions
 python-decouple
 Pillow
 python-magic-bin
-filemagic
+
