@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+import os 
 from pathlib import Path
 from decouple import config
 
@@ -29,7 +30,7 @@ SECRET_KEY = config("DJANGO_SECRET_KEY",'django-insecure-)s$5b$%h1raq8oam0+1^v19
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -51,7 +52,8 @@ INSTALLED_APPS = [
     'api.apps.ApiConfig',
     'apps.accounts',
     'apps.meta_extract.apps.MetaExtractConfig',
-    #'apps.commons.apps.CommonsConfig',
+    'apps.commons.apps.CommonsConfig',
+    'users',
 
 
 ]
@@ -138,3 +140,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
