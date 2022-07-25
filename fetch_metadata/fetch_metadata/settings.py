@@ -55,6 +55,7 @@ INSTALLED_APPS = [
 
 
 ]
+AUTH_USER_MODEL = 'accounts.CustomUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -68,10 +69,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'fetch_metadata.urls'
 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR/"templates",
+         ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
