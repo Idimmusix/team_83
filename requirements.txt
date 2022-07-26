@@ -5,3 +5,8 @@ python-decouple
 Pillow
 python-magic-bin
 filemagic
+
+
+PikePdf
+Pillow
+tinytag
