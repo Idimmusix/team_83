@@ -53,7 +53,6 @@ INSTALLED_APPS = [
     'apps.meta_extract.apps.MetaExtractConfig',
     'apps.commons.apps.CommonsConfig',
 
-
 ]
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
