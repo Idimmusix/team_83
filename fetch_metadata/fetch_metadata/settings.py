@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'apps.accounts',
     'apps.meta_extract.apps.MetaExtractConfig',
     'apps.commons.apps.CommonsConfig',
-    'users',
+    'files',
 
 
 ]
