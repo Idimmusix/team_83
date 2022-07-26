@@ -1,0 +1,7 @@
+:root {
+  --color-primary: yellow;
+  --color-seco: blue;
+}
+body {
+  background-color: var(--color-primary);
+}

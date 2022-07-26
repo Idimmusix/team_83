@@ -1,6 +1,6 @@
 from rest_framework import viewsets, permissions, status
 from rest_framework.response import Response
-
+from rest_framework.decorators import action
 from django.contrib.auth import get_user_model
 
 from .permissions import IsCreatorOrAdminReadOnly
@@ -66,3 +66,18 @@ class UserViewSet(viewsets.ModelViewSet):
 
     def get_serializer_class(self):
         return self.serializers_classes.get(self.action, self.default_serializer_class)
+    
+    @action(detail=True, methods=['post'])
+    def change_password(self, request, pk=None):
+        """
+        Allow an authenticated user can change password
+        """
+        user = self.get_object()
+        serializer = serializers.UserInputSerializer(data=request.data)
+        if serializer.is_valid():
+            user.change_password(serializer.validated_data['password'])
+            user.save()
+            return Response({'status': 'password changed'})
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        
